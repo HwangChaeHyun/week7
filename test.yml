@@ -1,0 +1,14 @@
+name: First #Define Workflow name 
+on: workflow_dispatch # Define events #이벤트트리거 언제 테스트 수행할건가 #dispatch는 "수동"으로 테스트 수행할때 사용
+jobs: # Define Jobs 
+  first-job: # job name, up to you
+    runs-on: ubuntu-latest # key name, setting environment #필요한환경 
+    steps: # Describe Steps
+      - name: Print greeting #step1
+        run: echo "Hello World!!!!!!!"
+      - name: Multiple Lines #step2
+        run: | #다수의 명령어를 입력한다. 
+          echo "Line1"
+          echo "Line2"
+      - name: Print goodbye #step3
+        run: echo "Goodbye!"
